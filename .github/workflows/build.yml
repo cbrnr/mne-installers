@@ -237,7 +237,7 @@ jobs:
           mkdir signed
       - name: Download appropriate installer
         if: github.event_name != 'pull_request'
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ env.MNE_INSTALLER_ARTIFACT_ID }}
       - name: EV-code sign installer (Windows)
@@ -312,7 +312,7 @@ jobs:
           echo "MNE_ACTIVATE=${MNE_ACTIVATE}"
 
       - name: Download appropriate installer
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ${{ env.MNE_INSTALLER_ARTIFACT_ID }}
 
@@ -449,37 +449,37 @@ jobs:
       # These names should correspond to MNE_INSTALLER_ARTIFACT_ID in tools/extract_version.sh
 
       - name: Download Linux installer
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: MNE-Python-Linux-x86_64
 
       - name: Download Linux json
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: MNE-Python-Linux-x86_64-json
 
       - name: Download Windows installer
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: MNE-Python-Windows-x86_64
 
       - name: Download Windows json
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: MNE-Python-Windows-x86_64-json
 
       - name: Download macOS Intel installer
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: MNE-Python-macOS-x86_64
 
       - name: Download macOS Intel json
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: MNE-Python-macOS-x86_64-json
 
       - name: Download macOS M1 installer
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: MNE-Python-macOS-arm64
 
@@ -488,7 +488,7 @@ jobs:
       # disable this for now.
       #
       # - name: Download macOS M1 json
-      #   uses: actions/download-artifact@v3
+      #   uses: actions/download-artifact@v4.1.7
       #   with:
       #     name: MNE-Python-macOS-arm64-json
 
